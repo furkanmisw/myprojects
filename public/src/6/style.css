@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Poppins:wght@500&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.bg {
+  width: 1600px;
+  height: 100vh;
+  background-color: #f8f8fb;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 4.5rem;
+  flex-direction: column;
+}
+h1 {
+  color: #171645 !important;
+  font-family: "Merriweather", serif;
+  margin-bottom: 2rem;
+}
+.content {
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+}
+.box {
+  cursor: pointer;
+  background-color: #f8f8fb;
+  height: 75px;
+  display: flex;
+  padding: 0px 24px;
+  align-items: center;
+  justify-content: center;
+  color: #171645 !important;
+  margin-bottom: 12px;
+  border: 1px solid #dadaf2;
+  border-radius: 4px;
+}
+input,
+p {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px !important;
+}
+.login {
+  border: none;
+  color: #fff !important;
+  background-color: #171645;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.or {
+  margin: 2rem auto;
+  opacity: 0.5;
+  font-size: 18px;
+}
+button:active {
+  transform: scale(0.97);
+}
+img {
+  margin-right: 10px;
+  width: 27px;
+  height: 27px;
+}
+.c {
+  display: flex;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.signup {
+  margin-top: 2rem;
+  text-align: center;
+}

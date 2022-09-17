@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+* {
+  color: #291f68;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.bg {
+  z-index: 5;
+  background-color: #dce3fb;
+  width: 1600px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+}
+.wrapper {
+  width: 948px;
+  position: relative;
+  height: 640px;
+}
+.container1 {
+  position: absolute;
+  z-index: 15;
+
+  width: min-content;
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 2rem;
+}
+img {
+  margin-right: 1rem;
+}
+h1 {
+  font-size: 1.5rem;
+  font-family: "Merriweather", serif;
+}
+.card {
+  display: flex;
+  align-items: center;
+}
+.location {
+  display: flex;
+}
+.location p {
+  margin-left: 4px;
+}
+.buttons {
+  margin-top: 2rem;
+  height: 134px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+button:active {
+  transform: scale(0.97);
+}
+button {
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  height: 59px;
+  width: 369px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button p {
+  color: #fff;
+  font-size: 18px;
+}
+button svg {
+  margin-right: 0.5rem;
+}
+.btn1 {
+  background-color: #291f68;
+}
+.btn2 {
+  background-color: #fff;
+  border: #291f68 1px solid;
+}
+.btn2 p {
+  color: #291f68;
+}
+.container2 {
+  z-index: 10;
+  width: 452px;
+  height: 312px;
+  position: absolute;
+  right: 113px;
+  bottom: 0px;
+  border-radius: 5rem;
+  background-color: #291f68;
+}
+.container3 {
+  z-index: 20;
+  border-radius: 2rem;
+  position: absolute;
+  bottom: 113px;
+  right: 0px;
+  padding: 4rem;
+  background-color: white;
+}
+.container3 h1 {
+  margin-bottom: 1rem;
+  width: 216px;
+}
+.row {
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 40px;
+}
+.a {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}

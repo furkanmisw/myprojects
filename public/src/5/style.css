@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.bg {
+  width: 1600px;
+  height: 100vh;
+  margin: auto;
+  background-color: #f7f4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  z-index: 1;
+  height: 613px;
+  position: absolute;
+  width: 421px;
+  background-color: #efebfd;
+}
+.container {
+  background-color: white;
+  z-index: 2;
+  width: 640px;
+  height: 464px;
+  border-radius: 1.5rem;
+  padding: 4.5rem;
+}
+.boxs {
+  height: 232px;
+  color: #281a51;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.box {
+  cursor: pointer;
+  border-radius: 1.5rem;
+  width: 112px;
+  height: 108px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+p {
+  margin-top: 4px;
+}
+.s {
+  box-shadow: 0px 14px 16px 0px rgba(41, 11, 128, 0.1);
+}
+.input-box {
+  padding: 0px 1rem;
+  display: flex;
+  align-items: center;
+  width: 348px;
+  border-radius: 1.5rem;
+  border: 1px solid #dbd5ec;
+  margin-right: 1rem;
+}
+input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-right: 1rem;
+}
+.input-box svg {
+  margin-right: 10px;
+}
+.search {
+  margin-bottom: 2rem;
+  display: flex;
+}
+button {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 1.5rem;
+  background-color: #281a51;
+  display: flex;
+  padding: 1rem;
+}
+button svg {
+  margin-right: 10px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <div class="containers">
+        <div class="container">
+          <div class="sections">
+            <div class="section" style="margin-bottom: 24px">
+              <input
+                checked
+                value="true"
+                type="radio"
+                name="price-schedule"
+                id="month"
+              />
+              <p>Billed monthly</p>
+            </div>
+            <div class="section">
+              <input type="radio" name="price-schedule" id="year" />
+              <p>Billed yearly</p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h1>For individuals</h1>
+          <p class="price">$9.99 / month</p>
+          <button>Buy now</button>
+        </div>
+        <div class="container">
+          <h1>For families</h1>
+          <p class="price">$16.99 / month</p>
+          <button>Buy now</button>
+        </div>
+        <div class="container" style="border-right: 1px solid #c0c8e3">
+          <h1>For teams</h1>
+          <p class="price">$16.58 / month</p>
+          <button>Try for free</button>
+          <div class="ex">or <span>purchase now</span></div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

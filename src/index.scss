@@ -1,0 +1,407 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  padding-top: 90px;
+  background-color: rgb(240, 240, 240);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.header {
+  @media screen and (max-width: 600px) {
+    ul {
+      display: none !important;
+    }
+    .btn {
+      display: block !important;
+    }
+  }
+
+  z-index: 100;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 70px;
+  width: 100vw;
+  padding: 0px 2rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 10px 20px -7px rgb(160 44 219 / 7%);
+  align-items: center;
+  h1 {
+    font-size: 1.5rem;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    li {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem;
+      a {
+        p {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .btn {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    .close,
+    input,
+    menu {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    input {
+      cursor: pointer;
+      opacity: 0;
+    }
+    .listview {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0px;
+      height: calc(100vh - 70px);
+      width: 100vw;
+      background-color: white;
+      ul {
+        display: block !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+        list-style: none;
+        align-items: center;
+        margin-top: 4rem;
+        li {
+          display: flex;
+          align-items: center;
+          margin: 1rem;
+          justify-content: center;
+          a {
+            p {
+              font-size: 1.5rem;
+              padding: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+    .close,
+    .menu {
+      pointer-events: none;
+    }
+    .close {
+      display: none;
+    }
+    input:checked ~ .close {
+      display: block;
+    }
+    input:checked ~ .menu {
+      display: none;
+    }
+    input:checked ~ .listview {
+      display: block;
+    }
+  }
+}
+
+.home {
+  .items {
+    .search {
+      width: 100%;
+      margin: 3rem 1rem 1rem;
+      .search-box {
+        position: relative;
+        height: 50px;
+        input {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          font-size: 18px;
+          width: 275px;
+        }
+        .close {
+          width: 1.5rem;
+          position: relative;
+          top: 4px;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          width: 300px;
+          height: 1px;
+          left: 0px;
+          top: 2.2rem;
+          background-color: rgba($color: #000000, $alpha: 0.4);
+        }
+      }
+    }
+    .no-result {
+      color: red;
+      font-size: 1.5rem;
+      display: flex;
+      margin: 1rem;
+      pre {
+        font-weight: 500;
+      }
+    }
+    @media screen and (max-width: 1600px) {
+      max-width: 1200px !important;
+    }
+    @media screen and (max-width: 1200px) {
+      max-width: 800px !important;
+    }
+    @media screen and (max-width: 800px) {
+      max-width: 450px !important;
+      .item {
+        width: 100% !important;
+      }
+    }
+    max-width: 1600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    .item {
+      width: 400px;
+      height: 400px;
+      padding: 1rem;
+      .content {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+        background-color: white;
+        height: 100%;
+        &:hover {
+          box-shadow: 0 20px 20px -15px rgb(95 83 214 / 20%);
+          transform: scale(1.02);
+          button {
+            bottom: 1.5rem;
+            opacity: 1;
+          }
+        }
+
+        img {
+          height: 250px;
+          width: 100%;
+          object-fit: cover;
+        }
+        .details {
+          padding: 20px 15px;
+          margin-bottom: 10px;
+          h1 {
+            font-size: 18px;
+            margin: 10px 0px 5px;
+          }
+          p {
+            font-size: 1rem;
+            opacity: 0.7;
+          }
+        }
+        button {
+          opacity: 0;
+          width: min-content;
+          height: min-content;
+          transition-duration: 750ms;
+          position: absolute;
+          bottom: 1rem;
+          right: 1rem;
+          padding: 0.5rem 1rem;
+          font-weight: 500;
+          font-size: 1rem;
+          color: white;
+          background-image: linear-gradient(to right, #68e4bc 0%, #4ad0d1 99%);
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+.project {
+  .content {
+    display: flex;
+    max-width: 1600px;
+    margin: 0px auto;
+    flex-wrap: wrap;
+    padding: 1rem;
+    h1 {
+      margin: 0.5rem 0px;
+    }
+    p {
+      margin-bottom: 0.3rem;
+    }
+    .img-wrapper {
+      border-radius: .5rem;
+      position: relative;
+      min-width: 600px;
+      flex: 1;
+      overflow: hidden;
+      max-height: calc(100vh - 190px - 2rem);
+      margin-bottom: 2rem;
+      &:hover {
+        .demo {
+          opacity: 1;
+          bottom: 3rem;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .demo {
+        opacity: 0;
+        width: min-content;
+        height: min-content;
+        transition-duration: 500ms;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        padding: 0.5rem 1.2rem;
+        font-weight: 500;
+        font-size: 18px;
+        color: white;
+        background-image: linear-gradient(to right, #68e4bc 0%, #4ad0d1 99%);
+        border-radius: 5px;
+      }
+    }
+    .details {
+      .share {
+        border: 1px solid rgba($color: #000000, $alpha: 0.4);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        padding: 0.2rem 1rem;
+        font-weight: 500;
+        font-size: 16px;
+        color: #7D7A9E;
+        svg {
+          margin-right: 0.5rem;
+        }
+      }
+      height: min-content;
+      border-radius: 0.5rem;
+      margin-left: 2rem;
+      background-color: white;
+      width: 350px;
+      padding: 1rem;
+      @media screen and (max-width: 1013px) {
+        width: 100%;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 0px !important;
+        .c-colors {
+          flex-direction: row !important;
+          margin-top: 2rem !important;
+        }
+        .color {
+          margin: 0px 0.5rem !important;
+        }
+      }
+      .colors {
+        .title {
+          margin: 0.5rem 0px;
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+        .divide {
+          height: 1px;
+          width: 100%;
+          background-color: rgba($color: #000000, $alpha: 0.5);
+        }
+        .s {
+          margin-bottom: 1rem;
+        }
+
+        margin-top: 1rem;
+        position: relative;
+        .colors-text {
+          position: relative;
+          margin: 1rem 0px;
+          font-weight: 500;
+          font-size: 1.2rem;
+          text-align: center;
+          width: 200px;
+          margin: 1rem auto;
+          &::after {
+            content: "";
+            width: 3rem;
+            height: 1px;
+            left: 1rem;
+            top: 1rem;
+            background-color: black;
+            position: absolute;
+          }
+          &::before {
+            content: "";
+            width: 3rem;
+            height: 1px;
+            right: 1rem;
+            top: 1rem;
+            background-color: black;
+            position: absolute;
+          }
+        }
+        .c-colors {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .color {
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            overflow: hidden;
+            padding: 0.7rem;
+            border-radius: 0.5rem;
+            margin: 0.5rem 0px;
+            font-weight: 500;
+            .f {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0px;
+              top: 0px;
+              background-color: rgba($color: #000000, $alpha: 0.15);
+              display: none;
+            }
+            &:hover {
+              .f {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
