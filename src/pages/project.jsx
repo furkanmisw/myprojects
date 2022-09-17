@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import Color from "../components/color";
 
@@ -34,6 +35,9 @@ const Project = () => {
   };
   return (
     <div className="project">
+      <Helmet>
+        <title>Project {`${data?.id}`}</title>
+      </Helmet>
       <div className="content">
         <div className="img-wrapper">
           <img src={`/src/${projectId}/main.png`} alt="mainpng" />

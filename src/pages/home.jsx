@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import Box from "../components/box";
 
 const Home = () => {
@@ -29,6 +30,9 @@ const Home = () => {
 
   return (
     <div className="home">
+      <Helmet>
+        <title>#MyProjects</title>
+      </Helmet>
       <div className="items">
         <div className="search">
           <div className="search-box">
